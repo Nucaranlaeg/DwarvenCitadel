@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" http-equiv="Content-Type">
+<html>
+	<head>
+		<title>Dwarven Citadel</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="templates">
+			<div id="stat-template" class="stat">
+				<div class="name"></div>
+				<div class="value"></div>
+				<div class="description"></div>
+				<div class="cap-wrapper">
+					<div class="cap"></div>
+					<button class="cap-increase increment-button">+</button>
+				</div>
+			</div>
+		</div>
+		<div class="col options-col">
+			<div class="col-header">Options</div>
+			<button id="save-button" onclick="trySave()">Save Game<div class="description">Game saves automatically.</div></button>
+			<button id="export-button" onclick="openImportExport()">Import/Export</button>
+			<button id="help-button" class="option-button" onclick="document.querySelector('#help-box').style.display = 'block'">Help & Info</button>
+			<button id="support-button" class="option-button" onclick="window.open('https:\/\/paypal.me\/SamBenner')">Support Development</button>
+			<button id="discord-button" class="option-button" onclick="window.open('https:\/\/discord.gg\/Wp3AQjpHsT')">Discord</button>
+		</div>
+		<div id="selected-options" class="col">
+
+		</div>
+		<div id="map"></div>
+		<div id="export-wrapper" class="lightbox" onclick="document.querySelector('#export-wrapper').style.display = 'none'">
+			<div id="export-text" onclick="event.stopPropagation()">
+				<div class="relative-wrapper">
+					<textarea id="save-string"></textarea>
+					<button id="export-button" onclick="exportGame()">Export</button>
+					<button id="import-button" onclick="importGame()">Import</button>
+					<button id="hard-reset-button" ondblclick="hardResetGame()">Hard Reset (double click)</button>
+				</div>
+			</div>
+		</div>
+		<div id="help-box" class="lightbox" onclick="event.target == this && (this.style.display = 'none')">
+			<div id="help-inner">
+				<div id="help-tabs">
+					<div class="tab" onclick="showHints()">General hints</div>
+					<div class="tab" onclick="showAllCreatureHelp()">Bestiary</div>
+					<div class="tab" onclick="showAllAIHelp()">AIs</div>
+					<div class="tab" onclick="showAllSpellHelp()">Spells</div>
+				</div>
+				<div id="help-selector"></div>
+				<div id="help-detail">
+					<div id="help-description"></div>
+				</div>
+			</div>
+		</div>
+		<div id="tutorial1" class="lightbox" onclick="(this.style.display = 'none') && (document.querySelector('#tutorial2').style.display = 'block')">
+			<div class="tutorial-dialogue" style="top: 50px; left: 50px;">
+				Welcome to Undeterred!  Click anywhere to continue.
+			</div>
+		</div>
+		<div id="tutorial2" class="lightbox" onclick="(this.style.display = 'none') && (document.querySelector('#tutorial3').style.display = 'block')">
+			<div class="tutorial-dialogue" style="top: 50px; left: 50px; width: 300px;">
+				In Undeterred, your adventurers explore a cavern.  Each time you enter the cavern, you can bring three of your experienced adventurers and one new one.
+			</div>
+		</div>
+		<script src="enemy.js"></script>
+		<script src="dwarf.js"></script>
+		<script src="stuff.js"></script>
+		<script src="map.js"></script>
+		<script src="main.js"></script>
+		<script src="save.js"></script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+==================================================
+Overview
+==================================================
+
+Player starts with 7 dwarves, whose goal is to survive as long as possible.
+Dwarves have 4 actions:
+ * Mine
+ * Build
+ * Upgrade
+ * Research
+The dwarves dig deeper and deeper into the mountain and slowly construct a fortress
+for themselves to prevent their enemies (orcs, goblins, etc.) from reaching them.
+They can build and improve various kinds of weaponry and traps that function independently,
+find gems to add more magical effects to their machines, and find exotic metals that
+allow for powerful defenses.
+
+==================================================
+Dwarves
+==================================================
+
+Each dwarf has his specialty, developed by practice.  The more a dwarf mines, for example,
+the better he gets at it.  Dwarves have one skill per action.
+When you have a dwarf selected, you can see his level in each skill, and you can disable one
+or more skills so that the dwarf doesn't work on things that he's not good at.  Dwarves
+preferentially choose tasks that are closer to them and that they're better at.
+
+==================================================
+Mining
+==================================================
+
+When a dwarf mines, he carves more space into the mountain for the dwarves.  Each tile mined
+gives one stone, in addition to potentially finding ore or gems.  While obtaining ore and gems
+is random, both become more frequent the deeper your dwarves dig.
+
+==================================================
+Construction
+==================================================
+
+There are many structures to build.
+ * Traps injure any enemy which walk over them.  They typically do less damage and have stronger
+   effects than other constructions, and they can only attack a given enemy once.  They cannot be damaged.
+  ** Spike trap: Deal a little damage, slow an enemy.  No cooldown.
+  ** Swinging ball: Deal a little damage, stun for a brief time.
+  ** 
+ * Towers fire projectiles at nearby enemies.  While towers have unlimited ammo, they are more effective
+   if they have been recently serviced by a dwarf.  Towers block the path.
+ * Walls do nothing except block the path.  When a dwarf has no path outside, he slowly suffocates
+   (though this damage, unlike normal damage, recovers over time).
